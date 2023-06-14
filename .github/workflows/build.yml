@@ -6,35 +6,21 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
   deploy:
     runs-on: ubuntu-latest
-
-    needs: build
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          personal_token: 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
-          publish_dir: ./build
+          node-version: '14'
+      - name: Build web-app
+        run: |
+          npm install
+          npm run build
+      - name: Deploy to gh-pages
+        env:
+          PERSONAL_TOKEN: ${{ secrets.TUDO }}
+        run: |
+          git config --global user.name "PedroMunhozz"
+          git config --global user.email "pedromunhozsouza@gmail.com"
+          npm run deploy
