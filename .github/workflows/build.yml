@@ -23,6 +23,11 @@ jobs:
           git config --global user.email "pedromunhozsouza@gmail.com"
           git config --global user.name "PedroMunhozz"
 
+      - name: Create known_hosts file
+        run: |
+          mkdir -p ~/.ssh
+          touch ~/.ssh/known_hosts
+
       - name: Deploy to gh-pages
         env:
           GH_TOKEN: ${{ secrets.TUDO }}
