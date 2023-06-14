@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.aeffd8ef.css",
-    "main.js": "/static/js/main.8fa49673.js",
-    "static/media/music.mp3": "/static/media/music.609601e5f1fe790acffa.mp3",
-    "static/media/img1.jpg": "/static/media/img1.bf54c397892ebcefa16f.jpg",
-    "static/media/img5.jpg": "/static/media/img5.bc7fa310e3abb2ff5f88.jpg",
-    "static/media/img8.jpg": "/static/media/img8.bd2b21a222731b93117b.jpg",
-    "static/media/img6.jpg": "/static/media/img6.71e4d58d6124022c2495.jpg",
-    "static/media/img2.jpg": "/static/media/img2.9aa2490e064899924660.jpg",
-    "static/media/img3.jpg": "/static/media/img3.9a51cc01e58b4834a525.jpg",
-    "static/media/img4.jpg": "/static/media/img4.c66b1f43b6152dc47c3c.jpg",
-    "static/media/img9.jpg": "/static/media/img9.a88ba5e3f5a4e5f24f1a.jpg",
-    "static/media/img7.jpg": "/static/media/img7.0c7d41113e7cc9cef78c.jpg",
-    "index.html": "/index.html",
-    "main.aeffd8ef.css.map": "/static/css/main.aeffd8ef.css.map",
-    "main.8fa49673.js.map": "/static/js/main.8fa49673.js.map"
+    "main.css": "/TxaTxa/static/css/main.493a9347.css",
+    "main.js": "/TxaTxa/static/js/main.45ee32b0.js",
+    "static/media/music.mp3": "/TxaTxa/static/media/music.609601e5f1fe790acffa.mp3",
+    "static/media/img1.jpg": "/TxaTxa/static/media/img1.bf54c397892ebcefa16f.jpg",
+    "static/media/img5.jpg": "/TxaTxa/static/media/img5.bc7fa310e3abb2ff5f88.jpg",
+    "static/media/img8.jpg": "/TxaTxa/static/media/img8.bd2b21a222731b93117b.jpg",
+    "static/media/img6.jpg": "/TxaTxa/static/media/img6.71e4d58d6124022c2495.jpg",
+    "static/media/img2.jpg": "/TxaTxa/static/media/img2.9aa2490e064899924660.jpg",
+    "static/media/img3.jpg": "/TxaTxa/static/media/img3.9a51cc01e58b4834a525.jpg",
+    "static/media/img4.jpg": "/TxaTxa/static/media/img4.c66b1f43b6152dc47c3c.jpg",
+    "static/media/img9.jpg": "/TxaTxa/static/media/img9.a88ba5e3f5a4e5f24f1a.jpg",
+    "static/media/img7.jpg": "/TxaTxa/static/media/img7.0c7d41113e7cc9cef78c.jpg",
+    "index.html": "/TxaTxa/index.html",
+    "main.493a9347.css.map": "/TxaTxa/static/css/main.493a9347.css.map",
+    "main.45ee32b0.js.map": "/TxaTxa/static/js/main.45ee32b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.aeffd8ef.css",
-    "static/js/main.8fa49673.js"
+    "static/css/main.493a9347.css",
+    "static/js/main.45ee32b0.js"
   ]
 }
