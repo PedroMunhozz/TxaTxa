@@ -9,20 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Build web-app
-        run: |
-          npm install
-          npm run build
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web app
+        run: npm run build
+
       - name: Deploy to gh-pages
-        env:
-          PERSONAL_TOKEN: ${{ secrets.TUDO }}
         run: |
-          git config --global user.name "PedroMunhozz"
-          git config --global user.email "pedromunhozsouza@gmail.com"
-          # git config --global user.password "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"
-          git config --global credential.helper store
-          npm run deploy
+          git checkout -b gh-pages
+          git add -f build
+          git commit -m "Deploy to GitHub Pages"
+          git subtree split --prefix build -b gh-pages-temp
+          git push -f origin gh-pages-temp:gh-pages
+          git branch -D gh-pages-temp
+          git checkout -f main
