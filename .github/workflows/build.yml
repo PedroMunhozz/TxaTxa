@@ -22,5 +22,7 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.TUDO }}
         run: |
           git config --global user.name "PedroMunhozz"
-          git config --global user.password "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"
+          git config --global user.email "pedromunhozsouza@gmail.com"
+          # git config --global user.password "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"
+          git config --global credential.helper store
           npm run deploy
