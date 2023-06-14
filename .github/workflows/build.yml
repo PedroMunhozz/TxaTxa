@@ -30,6 +30,8 @@ jobs:
           git checkout -b gh-pages
           git add -f build
           git commit -m "Deploy to GitHub Pages"
-          git remote set-url origin "https://PedroMunhozz:${{ secrets.TUDO }}@github.com/PedroMunhozz/TxaTxa.git"
+          git remote set-url origin git@github.com:PedroMunhozz/TxaTxa.git
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          echo "${GH_TOKEN}" | ssh-add -
           git push -f origin gh-pages
           git checkout -f main
