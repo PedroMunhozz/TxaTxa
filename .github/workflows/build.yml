@@ -6,37 +6,35 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build web app
+      - name: Build
         run: npm run build
 
-      - name: Set Git user
-        run: |
-          git config --global user.email "pedromunhozsouza@gmail.com"
-          git config --global user.name "PedroMunhozz"
+  deploy:
+    runs-on: ubuntu-latest
 
-      - name: Create known_hosts file
-        run: |
-          mkdir -p ~/.ssh
-          touch ~/.ssh/known_hosts
+    needs: build
 
-      - name: Deploy to gh-pages
-        env:
-          GH_TOKEN: ${{ secrets.TUDO }}
-        run: |
-          git checkout -b gh-pages
-          git add -f build
-          git commit -m "Deploy to GitHub Pages"
-          git remote set-url origin git@github.com:PedroMunhozz/TxaTxa.git
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          echo "${GH_TOKEN}" | ssh-add -
-          git push -f origin gh-pages
-          git checkout -f main
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.TUDO }}
+          publish_dir: ./build
