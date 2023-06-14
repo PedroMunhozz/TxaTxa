@@ -18,6 +18,11 @@ jobs:
       - name: Build web app
         run: npm run build
 
+      - name: Set Git user
+        run: |
+          git config --global user.email "pedromunhozsouza@gmail.com"
+          git config --global user.name "PedroMunhozz"
+
       - name: Deploy to gh-pages
         run: |
           git checkout -b gh-pages
