@@ -30,7 +30,6 @@ jobs:
           git checkout -b gh-pages
           git add -f build
           git commit -m "Deploy to GitHub Pages"
-          git subtree split --prefix build -b gh-pages-temp
-          git push -f origin gh-pages-temp:gh-pages
-          git branch -D gh-pages-temp
+          git remote set-url origin "https://PedroMunhozz:${{ secrets.TUDO }}@github.com/PedroMunhozz/TxaTxa.git"
+          git push -f origin gh-pages
           git checkout -f main
