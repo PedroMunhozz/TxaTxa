@@ -35,6 +35,7 @@ class BackgroundMusic extends Component {
             backgroundColor: "rgba(255, 255, 255)",
             color: "black",
             border: "none",
+            borderRadius: "5px",
             cursor: "pointer",
           }}
           onClick={this.playPause}
