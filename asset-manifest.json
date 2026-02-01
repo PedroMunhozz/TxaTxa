@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TxaTxa/static/css/main.3ac4a2df.css",
-    "main.js": "/TxaTxa/static/js/main.38f7b194.js",
+    "main.css": "/TxaTxa/static/css/main.892ea30e.css",
+    "main.js": "/TxaTxa/static/js/main.2c211cee.js",
     "static/media/music.mp3": "/TxaTxa/static/media/music.609601e5f1fe790acffa.mp3",
     "static/media/img1.jpg": "/TxaTxa/static/media/img1.bf54c397892ebcefa16f.jpg",
     "static/media/img5.jpg": "/TxaTxa/static/media/img5.bc7fa310e3abb2ff5f88.jpg",
@@ -13,11 +13,11 @@
     "static/media/img9.jpg": "/TxaTxa/static/media/img9.a88ba5e3f5a4e5f24f1a.jpg",
     "static/media/img7.jpg": "/TxaTxa/static/media/img7.0c7d41113e7cc9cef78c.jpg",
     "index.html": "/TxaTxa/index.html",
-    "main.3ac4a2df.css.map": "/TxaTxa/static/css/main.3ac4a2df.css.map",
-    "main.38f7b194.js.map": "/TxaTxa/static/js/main.38f7b194.js.map"
+    "main.892ea30e.css.map": "/TxaTxa/static/css/main.892ea30e.css.map",
+    "main.2c211cee.js.map": "/TxaTxa/static/js/main.2c211cee.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ac4a2df.css",
-    "static/js/main.38f7b194.js"
+    "static/css/main.892ea30e.css",
+    "static/js/main.2c211cee.js"
   ]
 }
