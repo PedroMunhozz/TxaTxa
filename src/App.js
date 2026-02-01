@@ -3,25 +3,13 @@ import './App.css';
 
 function App() {  
   const [startDate] = useState(new Date('2022-09-16T21:00:00'));
-  const [timeElapsed, setTimeElapsed] = useState(null);
+  const [endDate] = useState(new Date('2026-01-29T23:59:59'));
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const currentTime = new Date();
-      const elapsedTime = currentTime - startDate;
-      setTimeElapsed(elapsedTime);
-    }, 1000);
+  const timeElapsed = endDate - startDate;
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, [startDate]);
+  // const [timeElapsed, setTimeElapsed] = useState(null);
 
   const formatTimeElapsed = () => {
-    if (timeElapsed === null) {
-      return 'Calculating...';
-    }
-
     const seconds = Math.floor((timeElapsed / 1000) % 60);
     const minutes = Math.floor((timeElapsed / 1000 / 60) % 60);
     const hours = Math.floor((timeElapsed / (1000 * 60 * 60)) % 24);
@@ -38,10 +26,43 @@ function App() {
     );
   };
 
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     const currentTime = new Date();
+  //     const elapsedTime = currentTime - startDate;
+  //     setTimeElapsed(elapsedTime);
+  //   }, 1000);
+
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, [startDate]);
+
+  // const formatTimeElapsed = () => {
+  //   if (timeElapsed === null) {
+  //     return 'Calculating...';
+  //   }
+
+  //   const seconds = Math.floor((timeElapsed / 1000) % 60);
+  //   const minutes = Math.floor((timeElapsed / 1000 / 60) % 60);
+  //   const hours = Math.floor((timeElapsed / (1000 * 60 * 60)) % 24);
+  //   const days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
+
+  //   return (
+  //     <div className="time-container">
+  //       <div className="time-box">{days} d</div>
+  //       <div className="time-box">{hours} hrs</div>
+  //       <div className="time-box">{minutes} min</div>
+  //       <div className="time-box">{seconds} sec</div>
+  //       <div className="juntos"> juntos</div>
+  //     </div>
+  //   );
+  // };
+
   return (
     <div>
       <div>
-        <h1 className='titulo'>Feliz dia dos namorados, meu amor!😍</h1>
+        <h1 className='titulo'>Feliz dia dos namorados, meu amor (2023)!😍</h1>
         {formatTimeElapsed()}
       </div>
        <div className="image-container">
